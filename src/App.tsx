@@ -1,39 +1,38 @@
-import { Hero } from './components/Hero'
-import { Portfolio } from './components/Portfolio'
-import { Awards } from './components/Awards'
-import { About } from './components/About'
-import { Services } from './components/Services'
-import { Team } from './components/Team'
-import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
+import { HeroSection } from './components/speed/HeroSection'
+import { WhoWeAre } from './components/speed/WhoWeAre'
+import { WhatWeDo } from './components/speed/WhatWeDo'
+import { OperatingModel } from './components/speed/OperatingModel'
+import { CompensationStructure } from './components/speed/CompensationStructure'
+import { BackendSupport } from './components/speed/BackendSupport'
+import { ForClosers } from './components/speed/ForClosers'
+import { CTASection } from './components/speed/CTASection'
+import { SpeedFooter } from './components/speed/Footer'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground" style={{ overflow: 'visible' }}>
-      <main className="relative" role="main" style={{ overflow: 'visible' }}>
-        <section id="hero" aria-label="Hero section">
-          <Hero />
-        </section>
-        <section id="portfolio" aria-label="Portfolio section">
-          <Portfolio />
-        </section>
-        <section id="awards" aria-label="Awards section">
-          <Awards />
-        </section>
-        <section id="about" aria-label="About section">
-          <About />
-        </section>
-        <section id="services" aria-label="Services section">
-          <Services />
-        </section>
-        <section id="team" aria-label="Team section" style={{ overflow: 'visible', height: 'auto', minHeight: '0', maxHeight: 'none' }}>
-          <Team />
-        </section>
-        <section id="contact" aria-label="Contact section">
-          <Contact />
-        </section>
+    <div className="min-h-screen bg-background text-foreground">
+      <main className="relative">
+        <HeroSection />
+        
+        {/* Divider */}
+        <div className="section-divider" />
+        
+        <WhoWeAre />
+        
+        <WhatWeDo />
+        
+        <OperatingModel />
+        
+        <CompensationStructure />
+        
+        <BackendSupport />
+        
+        <ForClosers />
+        
+        <CTASection />
       </main>
-      <Footer />
+      
+      <SpeedFooter />
     </div>
   )
 }
