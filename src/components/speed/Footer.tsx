@@ -1,42 +1,19 @@
-'use client'
-
-import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export function SpeedFooter() {
   return (
-    <footer className="relative py-16 px-6 border-t border-border">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="text-3xl font-black text-gradient-blue">
-              SPEED
-            </span>
-          </motion.div>
-          
-          {/* Tagline */}
-          <motion.p
-            className="text-muted-foreground font-mono text-sm"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-          >
-            Performance-driven sales enablement
-          </motion.p>
-          
-          {/* Copyright */}
-          <motion.p
-            className="text-muted-foreground text-sm"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            © {new Date().getFullYear()} SPEED. All rights reserved.
-          </motion.p>
+    <footer className="border-t border-border py-12 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="text-sm text-muted-foreground">
+          <span className="font-bold text-foreground">SPEED</span> — Commercial-grade ads from phone footage.
+        </p>
+        <div className="flex items-center gap-6">
+          <Link to="/booking" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Contact
+          </Link>
+          <span className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} All rights reserved.
+          </span>
         </div>
       </div>
     </footer>
